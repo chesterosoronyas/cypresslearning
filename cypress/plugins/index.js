@@ -17,6 +17,17 @@
  */
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
+  on("task", {
+    DisplayHost(host) {
+      console.log("The host is ", config.env.host);
+      if (host == config.env.host) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  });
+
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-}
+};
