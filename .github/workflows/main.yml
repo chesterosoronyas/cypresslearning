@@ -1,11 +1,10 @@
-
 name: Node.js CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -44,4 +43,3 @@ jobs:
           start: npm run cypress:open
         env:
           CYPRESS_host: ${{secrets.CYPRESS_HOST}}
-         
